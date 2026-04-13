@@ -1,0 +1,9 @@
+# Локальные секреты — не коммитить
+keys.env
+.env
+*.local.env
+
+# Next.js (дашборд)
+dashboard/node_modules
+dashboard/.next
+dashboard/.env*.local
