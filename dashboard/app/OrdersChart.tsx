@@ -54,8 +54,8 @@ const PIE_COLORS = [
 ];
 
 const MODE_OPTIONS: { value: ChartMode; label: string }[] = [
-  { value: "daily", label: "По дням — столбцы и сумма линией" },
   { value: "perOrder", label: "Каждый заказ — отдельный столбец (сумма)" },
+  { value: "daily", label: "По дням — столбцы и сумма линией" },
   { value: "status", label: "По статусу — круговая" },
   { value: "method", label: "По способу оформления — горизонтальные столбцы" },
   { value: "orderType", label: "По типу заказа — горизонтальные столбцы" },
@@ -86,7 +86,7 @@ export function OrdersChart() {
   const [data, setData] = useState<ApiOk | null>(null);
   const [err, setErr] = useState<string | null>(null);
   const [loading, setLoading] = useState(true);
-  const [mode, setMode] = useState<ChartMode>("daily");
+  const [mode, setMode] = useState<ChartMode>("perOrder");
 
   useEffect(() => {
     if (!data) return;
