@@ -3,7 +3,14 @@ keys.env
 .env
 *.local.env
 
+# Python
+__pycache__/
+*.pyc
+
 # Next.js (дашборд)
 dashboard/node_modules
 dashboard/.next
 dashboard/.env*.local
+
+# Telegram notifier state
+state/
